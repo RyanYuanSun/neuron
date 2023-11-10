@@ -1,6 +1,4 @@
 from neuron import h
-from neuron.units import ms, mV
-from matplotlib import pyplot
 
 
 class BallAndStick:
