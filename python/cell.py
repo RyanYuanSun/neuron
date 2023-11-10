@@ -20,7 +20,7 @@ class Cell:
 
 
 """
-# Default neuron model
+# Default model with 1 soma and 1 dendrite
 # [Soma] o- [Dend]
 """
 class BallAndStick(Cell):
@@ -30,9 +30,9 @@ class BallAndStick(Cell):
         self.soma = h.Section(name='soma', cell=self)
         self.dend = h.Section(name='dend', cell=self)
         self.dend.connect(self.soma)
-        self.soma.L = self.soma.diam = 12.6157
-        self.dend.L = 200
-        self.dend.diam = 1
+        self.soma.L = self.soma.diam = 12.6157  # Soma length & diameter
+        self.dend.L = 200  # Dendrite length
+        self.dend.diam = 1  # Dendrite diameter
 
     def _setup_biophysics(self):
         for sec in self.all:
